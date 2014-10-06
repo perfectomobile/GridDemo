@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-testList">
-              <span class="suite-name border-passed">testList</span>
+              <span class="suite-name border-failed">testList</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,12 +48,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-testList">
-                    <span>C:\Users\uzie\dev\workspace\testNG_mevan\Executer.xml</span>
+                    <span>C:\Users\uzie\dev\TestEnv\Executer.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-testList">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-testList" class="hide-methods failed suite-testList"> (hide)</a> <!-- hide-methods failed suite-testList -->
+                      <a href="#" panel-name="suite-testList" class="show-methods failed suite-testList"> (show)</a> <!-- show-methods failed suite-testList -->
+                    </span>
+                    <div class="method-list-content failed suite-testList">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testList" title="test.java.TestNGUnitedTest" hash-for-method="CheckFlight">CheckFlight</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-testList -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +115,12 @@
                     <div class="method-list-content passed suite-testList">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-testList" title="test.java.TestNGUnitedTest" hash-for-method="CheckFlight(3152168C4EAA1E2A5DE93CF7B89222720E3A62E0)">CheckFlight(3152168C4EAA1E2A5DE93CF7B89222720E3A62E0)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-testList" title="test.java.TestNGUnitedTestTest" hash-for-method="f">f</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-testList" title="test.java.TestNGUnitedTest" hash-for-method="CheckFlight(D5B3B672)">CheckFlight(D5B3B672)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-testList" title="test.java.EmptyTest" hash-for-method="f">f</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-testList -->
@@ -121,26 +135,79 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-testList" class="panel testList">
-          <div class="suite-testList-class-passed">
+          <div class="suite-testList-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">test.java.TestNGUnitedTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CheckFlight(3152168C4EAA1E2A5DE93CF7B89222720E3A62E0)">
-                  </a> <!-- CheckFlight(3152168C4EAA1E2A5DE93CF7B89222720E3A62E0) -->
+                  <a name="CheckFlight">
+                  </a> <!-- CheckFlight -->
                   <span class="method-name">CheckFlight</span>
-                  <span class="parameters">(3152168C4EAA1E2A5DE93CF7B89222720E3A62E0)</span>
+                  <div class="stack-trace"><b>"org.testng.TestNGException: 
+Parameter &apos;deviceID&apos; is required by @Test on method CheckFlight but has not been marked @Optional or defined
+in C:\Users\uzie\dev\TestEnv\Executer.xml
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+... Removed 14 stack frames<br/> org.testng.TestNGException: 
+Parameter &apos;deviceID&apos; is required by @Test on method CheckFlight but has not been marked @Optional or defined
+in C:\Users\uzie\dev\TestEnv\Executer.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:355)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:447)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+"</b><br>org.testng.internal.Parameters.createParameters(Parameters.java:155)<br>org.testng.internal.Parameters.createParameters(Parameters.java:355)<br>org.testng.internal.Parameters.handleParameters(Parameters.java:447)<br>org.testng.internal.Invoker.handleParameters(Invoker.java:1383)<br>org.testng.internal.Invoker.createParameters(Invoker.java:1075)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.access$000(SuiteRunner.java:37)<br>org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)<br>org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)<br>java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)<br>java.util.concurrent.FutureTask.run(FutureTask.java:166)<br>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)<br>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)<br>java.lang.Thread.run(Thread.java:724)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-testList-class-failed -->
+          <div class="suite-testList-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.java.EmptyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CheckFlight(D5B3B672)">
-                  </a> <!-- CheckFlight(D5B3B672) -->
-                  <span class="method-name">CheckFlight</span>
-                  <span class="parameters">(D5B3B672)</span>
+                  <a name="f">
+                  </a> <!-- f -->
+                  <span class="method-name">f</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-testList-class-passed -->
+          <div class="suite-testList-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.java.TestNGUnitedTestTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="f">
+                  </a> <!-- f -->
+                  <span class="method-name">f</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,25 +215,25 @@
         </div> <!-- panel testList -->
         <div panel-name="test-xml-testList" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\uzie\dev\workspace\testNG_mevan\Executer.xml</span>
+            <span class="header-content">C:\Users\uzie\dev\TestEnv\Executer.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite verbose=&quot;0&quot; name=&quot;testList&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test name=&quot;United-iphone&quot;&gt;
-    &lt;parameter name=&quot;deviceID&quot; value=&quot;3152168C4EAA1E2A5DE93CF7B89222720E3A62E0&quot;/&gt;
+  &lt;test name=&quot;myTest&quot;&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;test.java&quot;/&gt;
+    &lt;/packages&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;test.java.Constants&quot;/&gt;
+      &lt;class name=&quot;test.java.EmptyTest&quot;/&gt;
+      &lt;class name=&quot;test.java.PerfectoTest&quot;/&gt;
       &lt;class name=&quot;test.java.TestNGUnitedTest&quot;/&gt;
+      &lt;class name=&quot;test.java.TestNGUnitedTestTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- United-iphone --&gt;
-  &lt;test name=&quot;Android 2&quot;&gt;
-    &lt;parameter name=&quot;deviceID&quot; value=&quot;D5B3B672&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;test.java.TestNGUnitedTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Android 2 --&gt;
+  &lt;/test&gt; &lt;!-- myTest --&gt;
 &lt;/suite&gt; &lt;!-- testList --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -178,10 +245,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">United-iphone (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Android 2 (1 class)</span>
+                <span class="test-name">myTest (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -207,20 +271,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CheckFlight')
-data.setCell(0, 2, 'test.java.TestNGUnitedTest')
-data.setCell(0, 3, 61113);
+data.setCell(0, 1, 'f')
+data.setCell(0, 2, 'test.java.EmptyTest')
+data.setCell(0, 3, 1);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'CheckFlight')
-data.setCell(1, 2, 'test.java.TestNGUnitedTest')
-data.setCell(1, 3, 41002);
+data.setCell(1, 1, 'f')
+data.setCell(1, 2, 'test.java.TestNGUnitedTestTest')
+data.setCell(1, 3, 0);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'CheckFlight')
+data.setCell(2, 2, 'test.java.TestNGUnitedTest')
+data.setCell(2, 3, 0);
 window.suiteTableData['testList']= { tableData: data, tableDiv: 'times-div-testList'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 1 ms</span>
               <div id="times-div-testList">
               </div> <!-- times-div-testList -->
             </div> <!-- times-div -->
@@ -231,24 +299,6 @@ return data;
             <span class="header-content">Reporter output for testList</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">CheckFlight(3152168C4EAA1E2A5DE93CF7B89222720E3A62E0)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">device:3152168C4EAA1E2A5DE93CF7B89222720E3A62E0</span>
-                <span class="reporter-method-output">device MODEL :iPhone-5</span>
-                <span class="reporter-method-output">device OS :iOS</span>
-                <span class="reporter-method-output"></br><b>Report:</b> <a href=c:\test\TestNG_3152168C4EAA1E2A5DE93CF7B89222720E3A62E0.HTML>Report</a></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">CheckFlight(D5B3B672)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">device:D5B3B672</span>
-                <span class="reporter-method-output">device MODEL :Galaxy S5 SM-G900A</span>
-                <span class="reporter-method-output">device OS :Android</span>
-                <span class="reporter-method-output"></br><b>Report:</b> <a href=c:\test\TestNG_D5B3B672.HTML>Report</a></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-testList" class="panel">
@@ -269,33 +319,26 @@ return data;
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">923 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">923 ms</span>
-              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.java.EmptyTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">CheckFlight(D5B3B672)</span>
-                <span class="method-start">924 ms</span>
+                <span class="method-name">f</span>
+                <span class="method-start">1861 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.java.TestNGUnitedTestTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">CheckFlight(3152168C4EAA1E2A5DE93CF7B89222720E3A62E0)</span>
-                <span class="method-start">924 ms</span>
+                <span class="method-name">f</span>
+                <span class="method-start">1866 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.java.TestNGUnitedTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">41930 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">62037 ms</span>
+                <span class="method-start">1869 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

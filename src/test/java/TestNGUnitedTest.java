@@ -6,6 +6,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -15,6 +18,7 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -79,13 +83,25 @@ public class TestNGUnitedTest {
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
-			
+
 		}
 	}
 
+	@DataProvider(name = "Devices", parallel = true)
+	public Iterator<Object[]> getDevices()  {
+		String[] devices ={"0149BCA71700D01F","A1A5438E","CD6C2ED905F210B1"};
 
-	@Parameters({ "deviceID" })
-	@Test
+		List<Object[]> objects = new ArrayList<>();
+		for(int i =0; i < devices.length; i++)
+		{
+			objects.add(new Object[] { devices[i] } );
+		}
+		return objects.iterator();
+	}
+
+
+	//@Parameters({ "deviceID" })
+	@Test (dataProvider="devices")
 	public void CheckFlight(String deviceID) {
 		_Device = deviceID;
 		Reporter.log("device:"+deviceID);
@@ -96,7 +112,7 @@ public class TestNGUnitedTest {
 		PerfectoTest t = new PerfectoTest();
 		String rc =  t.checkFlights(device);
 
-	
+
 		assert rc.equals("New York/Newark, NJ (EWR)") : "Expected  New York/Newark, NJ (EWR)" + rc;
 
 
