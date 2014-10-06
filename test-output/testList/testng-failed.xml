@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testList]" parallel="tests">
+  <parameter name="deviceID" value="D5B3B672"/>
+  <test name="United-iphone(failed)" parallel="tests">
+    <parameter name="deviceID" value="3152168C4EAA1E2A5DE93CF7B89222720E3A62E0"/>
+    <classes>
+      <class name="test.java.TestNGUnitedTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="CheckFlight" invocation-numbers="0"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- test.java.TestNGUnitedTest -->
+    </classes>
+  </test> <!-- United-iphone(failed) -->
+</suite> <!-- Failed suite [testList] -->

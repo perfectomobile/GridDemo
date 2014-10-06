@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Connect to:demo.perfectomobile.com]]>
+    </line>
+    <line>
+      <![CDATA[Connect to:demo.perfectomobile.com]]>
+    </line>
+    <line>
+      <![CDATA[device:D5B3B672]]>
+    </line>
+    <line>
+      <![CDATA[device:3152168C4EAA1E2A5DE93CF7B89222720E3A62E0]]>
+    </line>
+    <line>
+      <![CDATA[device MODEL :iPhone-5]]>
+    </line>
+    <line>
+      <![CDATA[device OS :iOS]]>
+    </line>
+    <line>
+      <![CDATA[device MODEL :Galaxy S5 SM-G900A]]>
+    </line>
+    <line>
+      <![CDATA[device OS :Android]]>
+    </line>
+    <line>
+      <![CDATA[</br><b>Report:</b> <a href=c:\test\TestNG_3152168C4EAA1E2A5DE93CF7B89222720E3A62E0.HTML>Report</a>]]>
+    </line>
+    <line>
+      <![CDATA[c:\test\TestNG_3152168C4EAA1E2A5DE93CF7B89222720E3A62E0.HTML]]>
+    </line>
+    <line>
+      <![CDATA[</br><b>Report:</b> <a href=c:\test\TestNG_D5B3B672.HTML>Report</a>]]>
+    </line>
+    <line>
+      <![CDATA[c:\test\TestNG_D5B3B672.HTML]]>
+    </line>
+  </reporter-output>
+  <suite name="testList" duration-ms="77101" started-at="2014-09-11T14:51:01Z" finished-at="2014-09-11T14:52:18Z">
+    <groups>
+    </groups>
+    <test name="United-iphone" duration-ms="58263" started-at="2014-09-11T14:51:01Z" finished-at="2014-09-11T14:51:59Z">
+      <class name="test.java.TestNGUnitedTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.java.TestNGUnitedTest@7717cddf]" name="beforeTest" is-config="true" duration-ms="913" started-at="2014-09-11T10:51:01Z" finished-at="2014-09-11T10:51:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Connect to:demo.perfectomobile.com]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.java.TestNGUnitedTest@7717cddf]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-09-11T10:51:01Z" finished-at="2014-09-11T10:51:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="CheckFlight(java.lang.String)[pri:0, instance:test.java.TestNGUnitedTest@7717cddf]" name="CheckFlight" duration-ms="41002" started-at="2014-09-11T10:51:01Z" finished-at="2014-09-11T10:51:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3152168C4EAA1E2A5DE93CF7B89222720E3A62E0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[device:3152168C4EAA1E2A5DE93CF7B89222720E3A62E0]]>
+            </line>
+            <line>
+              <![CDATA[device MODEL :iPhone-5]]>
+            </line>
+            <line>
+              <![CDATA[device OS :iOS]]>
+            </line>
+            <line>
+              <![CDATA[</br><b>Report:</b> <a href=c:\test\TestNG_3152168C4EAA1E2A5DE93CF7B89222720E3A62E0.HTML>Report</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CheckFlight -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.java.TestNGUnitedTest@7717cddf]" name="afterTest" is-config="true" duration-ms="16332" started-at="2014-09-11T10:51:42Z" finished-at="2014-09-11T10:51:59Z">
+          <reporter-output>
+            <line>
+              <![CDATA[c:\test\TestNG_3152168C4EAA1E2A5DE93CF7B89222720E3A62E0.HTML]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.java.TestNGUnitedTest -->
+    </test> <!-- United-iphone -->
+    <test name="Android 2" duration-ms="77101" started-at="2014-09-11T14:51:01Z" finished-at="2014-09-11T14:52:18Z">
+      <class name="test.java.TestNGUnitedTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.java.TestNGUnitedTest@1dad8678]" name="beforeTest" is-config="true" duration-ms="913" started-at="2014-09-11T10:51:01Z" finished-at="2014-09-11T10:51:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Connect to:demo.perfectomobile.com]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.java.TestNGUnitedTest@1dad8678]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-09-11T10:51:01Z" finished-at="2014-09-11T10:51:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="CheckFlight(java.lang.String)[pri:0, instance:test.java.TestNGUnitedTest@1dad8678]" name="CheckFlight" duration-ms="61113" started-at="2014-09-11T10:51:01Z" finished-at="2014-09-11T10:52:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[D5B3B672]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[device:D5B3B672]]>
+            </line>
+            <line>
+              <![CDATA[device MODEL :Galaxy S5 SM-G900A]]>
+            </line>
+            <line>
+              <![CDATA[device OS :Android]]>
+            </line>
+            <line>
+              <![CDATA[</br><b>Report:</b> <a href=c:\test\TestNG_D5B3B672.HTML>Report</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CheckFlight -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.java.TestNGUnitedTest@1dad8678]" name="afterTest" is-config="true" duration-ms="15063" started-at="2014-09-11T10:52:03Z" finished-at="2014-09-11T10:52:18Z">
+          <reporter-output>
+            <line>
+              <![CDATA[c:\test\TestNG_D5B3B672.HTML]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.java.TestNGUnitedTest -->
+    </test> <!-- Android 2 -->
+  </suite> <!-- testList -->
+</testng-results>
