@@ -35,7 +35,6 @@ import com.perfectomobile.selenium.options.MobileDeviceProperty;
 public class TestNGUnitedTest {
 
 	String _Device;
-	MobileDriver driver;
 	@BeforeMethod
 	public void beforeMethod() {
 	}
@@ -43,15 +42,10 @@ public class TestNGUnitedTest {
 	@BeforeTest
 	public void beforeTest() {
 
-		String host = Constants.PM_CLOUD;
-		String user = Constants.PM_USER;
-		String password = Constants.PM_PASSWORD;
-		driver = new MobileDriver(host, user, password);
-		Reporter.log("Connect to:"+host);
+	
 	}
 
-	@AfterTest
-	public void afterTest(){
+ 	public void afterTest(MobileDriver driver){
 		driver.quit();
 		InputStream reportStream = ((IMobileDriver) driver).downloadReport(MediaType.HTML);
 
@@ -83,27 +77,28 @@ public class TestNGUnitedTest {
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
-
+			
 		}
 	}
 
-	@DataProvider(name = "Devices", parallel = true)
-	public Iterator<Object[]> getDevices()  {
-		String[] devices ={"0149BCA71700D01F","A1A5438E","CD6C2ED905F210B1"};
-
-		List<Object[]> objects = new ArrayList<>();
-		for(int i =0; i < devices.length; i++)
-		{
-			objects.add(new Object[] { devices[i] } );
-		}
-		return objects.iterator();
-	}
-
-
+	 @DataProvider(name = "Devices" , parallel = true)
+	    public Object[][] testSumInput() {
+	        return new Object[][] { { "Android", "0149BCA71700D01F" }, 
+	        						{ "Android", "CD6C2ED905F210B1" },
+	        						{ "Android", "A1A5438E" } };
+	    }
+	 
 	//@Parameters({ "deviceID" })
-	@Test (dataProvider="devices")
-	public void CheckFlight(String deviceID) {
+	@Test (dataProvider="Devices")
+	public void CheckFlight(String Type,String deviceID) {
 		_Device = deviceID;
+ 		String host = Constants.PM_CLOUD;
+		String user = Constants.PM_USER;
+		String password = Constants.PM_PASSWORD;
+		MobileDriver driver = new MobileDriver(host, user, password);
+		Reporter.log("Connect to:"+host);
+ 		System.out.println(" **** new Drivewr  " + deviceID);
+
 		Reporter.log("device:"+deviceID);
 		IMobileDevice device = driver.getDevice(deviceID);
 		Reporter.log("device MODEL :"+device.getProperty(MobileDeviceProperty.MODEL));
@@ -112,9 +107,8 @@ public class TestNGUnitedTest {
 		PerfectoTest t = new PerfectoTest();
 		String rc =  t.checkFlights(device);
 
-
 		assert rc.equals("New York/Newark, NJ (EWR)") : "Expected  New York/Newark, NJ (EWR)" + rc;
-
+		afterTest(driver);
 
 	}
 
