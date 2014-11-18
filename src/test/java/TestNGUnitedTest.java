@@ -86,7 +86,7 @@ public class TestNGUnitedTest {
 	    public Object[][] testSumInput() {
 	        return new Object[][] { { "Android", "0149BCA71700D01F" }, 
 	        			{ "Android", "A1A5438E" } ,
-	        			{"iphone","3152168C4EAA1E2A5DE93CF7B89222720E3A62E0"}
+	        			{"iphone","39F3DA5531ADBE2A05CFF4D65E43A2C38D3D595A"}
 	        };
 	    }
 	 
