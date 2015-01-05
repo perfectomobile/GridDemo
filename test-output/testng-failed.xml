@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.java.TestNGUnitedTest">
+      <class name="test.java.gridExe">
         <methods>
-          <include name="CheckFlight"/>
+          <include name="beforeMethod"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
+          <include name="testDevices" invocation-numbers="3 2 1 0"/>
         </methods>
-      </class> <!-- test.java.TestNGUnitedTest -->
+      </class> <!-- test.java.gridExe -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

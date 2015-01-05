@@ -33,7 +33,7 @@ import com.perfectomobile.selenium.api.IMobileDriver;
  *	This basic test handle the driver and the device
  */
 
-public abstract class BasicTest implements Runnable{
+public abstract class BasicTest{
 
 
 	WebDriver _driver;
