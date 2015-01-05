@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-<repositories>
+	<repositories>
 		<repository>
 			<id>perfectomobile</id>
 			<name>Perfecto mobile</name>
@@ -142,11 +142,17 @@
 			<version>2.42.2</version>
 		</dependency>
 		<dependency>
-	      <groupId>com.google.code.gson</groupId>
-	      <artifactId>gson</artifactId>
-	      <version>2.3.1</version>
-	      <scope>compile</scope>
-	    </dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>2.42.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.3.1</version>
+			<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
@@ -157,6 +163,6 @@
 			<artifactId>cglib-nodep</artifactId>
 			<version>2.2</version>
 		</dependency>
-	    		
+
 	</dependencies>
 </project>
