@@ -5,6 +5,7 @@ package test.java;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -58,7 +59,12 @@ public class emptyDPTest {
 
 		if (reportStream != null) {
 			File reportFile = new File(Constants.REPORT_LIB+"TestNG_"+_Device+".HTML");
-			FileUtils.write(reportStream, reportFile);
+			try {
+				FileUtils.write(reportStream, reportFile);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			Reporter.log( Constants.REPORT_LIB+"TestNG_"+_Device+".HTML");
 
 			String filename =Constants.REPORT_LIB+"TestNG_"+_Device+".HTML"  ;

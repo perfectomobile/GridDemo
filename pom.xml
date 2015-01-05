@@ -14,6 +14,42 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+<repositories>
+		<repository>
+			<id>perfectomobile</id>
+			<name>Perfecto mobile</name>
+			<url>http://repository-perfectomobile.forge.cloudbees.com/public</url>
+		</repository>
+		<repository>
+			<id>central</id>
+			<name>Repo1</name>
+			<url>http://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<name>Repo1</name>
+			<url>http://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+
 	<build>
 		<resources>
 			<resource>
@@ -53,12 +89,12 @@
 		<dependency>
 			<groupId>com.perfectomobile</groupId>
 			<artifactId>pm-selenium</artifactId>
-			<version>2.20.0.004</version>
+			<version>3.3.0.003</version>
 		</dependency>
 		<dependency>
-			<groupId> com.perfectomobile </groupId>
+			<groupId>com.perfectomobile</groupId>
 			<artifactId>http-client</artifactId>
-			<version>2.20.0.16</version>
+			<version>3.3.0.4</version>
 		</dependency>
 		<dependency>
 			<groupId>dom4j</groupId>
@@ -105,5 +141,22 @@
 			<artifactId>selenium-support</artifactId>
 			<version>2.42.2</version>
 		</dependency>
+		<dependency>
+	      <groupId>com.google.code.gson</groupId>
+	      <artifactId>gson</artifactId>
+	      <version>2.3.1</version>
+	      <scope>compile</scope>
+	    </dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.2</version>
+		</dependency>
+	    		
 	</dependencies>
 </project>

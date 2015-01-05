@@ -2,6 +2,7 @@
 package scripts;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
@@ -63,7 +64,13 @@ public class Jenkins {
  		InputStream reportStream = PMdriver.downloadReport(MediaType.HTML);
 
 		File reportFile = new File("c:\\test\\jenkins.HTML");
-		FileUtils.write(reportStream, reportFile);
+		
+		try {
+			FileUtils.write(reportStream, reportFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 
 	}
