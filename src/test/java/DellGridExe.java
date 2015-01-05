@@ -1,4 +1,4 @@
-package GridExe;
+package test.java;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -14,6 +14,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
+
+import GridExe.BasicTest;
+import GridExe.Dell;
+import GridExe.ImageDetails;
+import GridExe.repUtil;
 
 public class DellGridExe {
 	

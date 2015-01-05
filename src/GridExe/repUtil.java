@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 public class repUtil {
 
-	static String Pre = "<!DOCTYPE html>"+
+	static public String Pre = "<!DOCTYPE html>"+
 			"<html lang=\"en\" class=\"no-js\">"+
 			"<head>"+
 			"<meta charset=\"UTF-8\" />"+
@@ -35,7 +35,7 @@ public class repUtil {
 			"</nav>"+
 			"</header>";	
 
-	static String Post = "<nav>"+
+	static public String Post = "<nav>"+
 			"<span class=\"icon nav-prev\"></span>"+
 			"<span class=\"icon nav-next\"></span>"+
 			"<span class=\"icon nav-close\"></span>"+
@@ -54,20 +54,20 @@ public class repUtil {
 			"</body>"+
 			"</html>";
 
-	static String preGrid = "<div id=\"grid-gallery\" class=\"grid-gallery\">"+
+	static public String preGrid = "<div id=\"grid-gallery\" class=\"grid-gallery\">"+
 			"<section class=\"grid-wrap\">"+
 			"<ul class=\"grid\">"+
 			"<li class=\"grid-sizer\"></li><!-- for Masonry column width -->";
 
-	static String postGrid = "</ul>"+
+	static public String postGrid = "</ul>"+
 			"</section><!-- // grid-wrap -->";
 
-	static String preSlides = 
+	static public String preSlides = 
 			"<section class=\"slideshow\">"+
 					"<ul>";
 
 
-	static String postSlides = "</ul>";
+	static public String postSlides = "</ul>";
 
 
 	public static void createReport()
