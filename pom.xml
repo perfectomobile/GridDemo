@@ -53,11 +53,11 @@
 	<build>
 		<resources>
 			<resource>
-				<directory>src/resources</directory>
+				<directory>src</directory>
 				<filtering>true</filtering>
 			</resource>
 			<resource>
-				<directory>src/grid/data</directory>
+				<directory>src/GridExe</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
