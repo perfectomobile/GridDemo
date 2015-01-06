@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.java.gridExe">
+      <class name="gridExe.GridExe">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="testDevices" invocation-numbers="3 2 1 0"/>
+          <include name="afterTest"/>
+          <include name="beforeMethod"/>
+          <include name="testDevices" invocation-numbers="2"/>
         </methods>
-      </class> <!-- test.java.gridExe -->
+      </class> <!-- gridExe.GridExe -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

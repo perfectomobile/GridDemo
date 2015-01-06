@@ -1,4 +1,4 @@
-package GridExe;
+package gridExe;
 
 import java.io.File;
 import java.io.FileWriter;

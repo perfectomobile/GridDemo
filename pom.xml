@@ -53,11 +53,11 @@
 	<build>
 		<resources>
 			<resource>
-				<directory>src</directory>
+				<directory>src/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 			<resource>
-				<directory>src/GridExe</directory>
+				<directory>src/grid/data</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
@@ -164,6 +164,11 @@
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib-nodep</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
 			<version>2.2</version>
 		</dependency>
 
