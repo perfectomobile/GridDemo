@@ -1,4 +1,4 @@
-package GridExe;
+package gridExe;
 
 public class ImageDetails {
 	
