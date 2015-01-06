@@ -56,8 +56,12 @@
 				<directory>src/resources</directory>
 				<filtering>true</filtering>
 			</resource>
+			<resource>
+				<directory>src/grid/data</directory>
+				<filtering>true</filtering>
+			</resource>
 		</resources>
-
+	 
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
